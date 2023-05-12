@@ -1,0 +1,6 @@
+.DS_Store
+.terraform
+clouds.yaml
+secure.yaml
+.terraform*
+terraform.tfstate*
