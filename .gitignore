@@ -4,3 +4,4 @@ clouds.yaml
 secure.yaml
 .terraform*
 terraform.tfstate*
+.vscode
