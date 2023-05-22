@@ -8,7 +8,7 @@ They don't claim to be perfect, but they are intended to serve as a good startin
 
 # Before you start
 
-Download your credentials (cloud.yaml) via Horizon and add your password as secure.yaml in your working directory (or in your $HOME/.config/openstack).
+Download your credentials (clouds.yaml) via Horizon and add your password as secure.yaml in your working directory (or in your $HOME/.config/openstack).
 
 You can find documentation on using clouds.yaml on [docs.openstack.org](https://docs.openstack.org/python-openstackclient/zed/configuration/index.html).
 
@@ -36,7 +36,7 @@ or via this [link](https://prod1.api.pco.get-cloud.io/project/api_access/clouds.
 
 The default "cloud" name is openstack. You can rename it - matching project or CSP and add multiple entries.
 
-To use it with the openstack provider for Terraform you can define it your Terraform file like your main.tf:
+To use it with the openstack provider for Terraform you can define it in your Terraform file like your main.tf:
 
 ```
 provider "openstack" {
@@ -57,6 +57,7 @@ just as you like.
 Here is a list of our examples:
 
 * just-one-instance - will spawn a single instance in your project without any extras
+* instance-using-cloud-init - will spawn an instance with cloud-init deploying a nginx plus security group needed
 
 # For further reading
 
