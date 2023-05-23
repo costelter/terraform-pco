@@ -3,20 +3,21 @@ resource "openstack_compute_instance_v2" "server" {
   name            = "number-one"  #Instance name
   image_id        = data.openstack_images_image_v2.image.id
   flavor_id       = data.openstack_compute_flavor_v2.flavor.id
-  key_pair        = var.keypair
+  key_pair        = var.keypair_name
   security_groups = var.security_groups
 
   network {
-    name = var.network
+    name = var.private_network_name
   }
 }
 
-# Add floating IP (FIP)
+# Allocate Floating IP
 resource "openstack_networking_floatingip_v2" "fip" {
-  pool = var.public_network
+  pool = var.public_network_name
 }
 
-resource "openstack_compute_floatingip_associate_v2" "fip" {
+# Associate Floating IP
+resource "openstack_compute_floatingip_associate_v2" "fip_association" {
   floating_ip = openstack_networking_floatingip_v2.fip.address
   instance_id = openstack_compute_instance_v2.server.id
 }
