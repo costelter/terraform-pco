@@ -30,13 +30,13 @@ data "template_file" "user_data" {
   template = file(var.user_data_filename)
 }
 
-# Create an instance
+# Create n instances
 resource "openstack_compute_instance_v2" "webserver" {
   count           = var.server_count
   name            = "webserver-${count.index + 1}"
   image_id        = data.openstack_images_image_v2.image.id
   flavor_id       = data.openstack_compute_flavor_v2.flavor.id
-  key_pair        = var.keypair
+  key_pair        = var.keypair_name
   security_groups = ["allow_http_and_ssh_web_server"]
 
   network {
@@ -95,7 +95,7 @@ resource "openstack_lb_monitor_v2" "monitor_80" {
   url_path = "/"
 }
 
-# Create floating IP (FIP)
+# Allocate floating IP (FIP)
 resource "openstack_networking_floatingip_v2" "fip" {
   pool = var.public_network_name
 }

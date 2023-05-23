@@ -3,7 +3,13 @@
 # name of your key pair
 variable "keypair_name" {
   type    = string
-  default = "cstelter"
+  default = "mykeypairname"
+}
+
+# name of your instance
+variable "instance_name" {
+  type    = string
+  default = "number-one"
 }
 
 # name of the private network (your project network)

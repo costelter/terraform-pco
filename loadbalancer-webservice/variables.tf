@@ -1,17 +1,17 @@
 # Variables
-variable "keypair" {
+variable "keypair_name" {
   type    = string
-  default = "cstelter"   # name of keypair created
+  default = "mykeypairname"   # name of keypair created
 }
 
 variable "private_network_name" {
   type    = string
-  default = "p500884-dev-network" # default internal network to be used
+  default = "p123456-dev-network" # default internal network to be used
 }
 
 variable "private_subnet_name" {
   type    = string
-  default = "p500884-dev-subnet"
+  default = "p123456-dev-subnet"
 }
 
 variable "public_network_name" {
@@ -49,5 +49,5 @@ variable "server_count" {
 
 variable "loadbalancer_name" {
   type    = string
-  default = "Loadbalancer Web Service"
+  default = "Web Service"
 }

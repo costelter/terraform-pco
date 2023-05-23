@@ -8,6 +8,12 @@ They don't claim to be perfect, but they are intended to serve as a good startin
 
 # Before you start
 
+Get a current version of terraform, see developer documention at Hashicorp.
+
+[Install Terraform](https://developer.hashicorp.com/terraform/downloads)
+
+The examples have been tested with version terraform v1.4.6 and openstack provider v1.51.1.
+
 Download your credentials (clouds.yaml) via Horizon and add your password as secure.yaml in your working directory (or in your $HOME/.config/openstack).
 
 You can find documentation on using clouds.yaml on [docs.openstack.org](https://docs.openstack.org/python-openstackclient/zed/configuration/index.html).
