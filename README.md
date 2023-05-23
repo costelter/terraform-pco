@@ -58,6 +58,7 @@ Here is a list of our examples:
 
 * just-one-instance - will spawn a single instance in your project without any extras
 * instance-using-cloud-init - will spawn an instance with cloud-init deploying a nginx plus security group needed
+* loadbalancer_webservice - will spawn n instances with nginx and a http loadbalancer
 
 # For further reading
 
