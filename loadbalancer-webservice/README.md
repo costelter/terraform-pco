@@ -4,6 +4,7 @@ Before you fire your "terraform apply" make sure that you change the following v
 
 * keypair_name - replace it with the name of your keypair
 * private_network_name - replace it with the name of your project network
+* private_subnet_name - replace it with the name of the subnet in your project network
 
 Optional changes:
 
