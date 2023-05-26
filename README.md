@@ -25,7 +25,7 @@ clouds:
   openstack:
     auth:
       auth_url: https://prod1.api.pco.get-cloud.io:5000
-      username: "admin"
+      username: "u123456-default"
       project_id: 980c0d0dcb874244a54a6c149fa6d389
       project_name: "p123456-my-project"
       user_domain_name: "d123456"
